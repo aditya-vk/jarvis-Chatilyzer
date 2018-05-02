@@ -35,8 +35,6 @@ def getNumberOfTexts(chatList):
     '''
     Returns the number of texts sent by each speaker
     @param chatList The list of timestamps, speaker, and content
-    @param startDate The start date to compute frequency from
-    @param endDate The end date to compute frequency upto
     '''
     numberOfTexts = {}
     for chat in chatList:
@@ -51,8 +49,6 @@ def getNumberOfWords(chatList):
     '''
     Returns the number of words sent by each speaker
     @param chatList The list of timestamps, speaker, and content
-    @param startDate The start date to compute frequency from
-    @param endDate The end date to compute frequency upto
     '''
     numberOfWords = {}
     for chat in chatList:
@@ -111,15 +107,15 @@ if __name__ == '__main__':
 
     # Create the list of [timestamp, speaker, text]
     chatList = readFile(chatFileName)
-
     # Get the number of texts 
     numberOfTexts = getNumberOfTexts(chatList)
-
     # Get the number of words
     numberOfWords = getNumberOfWords(chatList)
-
     # Get the frequency of words
     frequencyOfWords = getFrequencyOfWords(chatList, stopwordsFileName)
 
+    # Debug
     IPython.embed()
-    # Plot
+    # TODO (avk): Plot the graphs
+    # TODO (avk): Introduce command-line arguments
+    # TODO (avk): Introduce start and end dates for each feature
