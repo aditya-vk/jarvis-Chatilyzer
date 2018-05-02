@@ -2,5 +2,8 @@
 Analyzes WhatsApp Chats. Uses Python3.
 
 Currently Supports
-* Speaker Frequency as `Fn(Start Date = Beginning of Time)`
-* Word Frequency as `Fn(Speaker = Everybody)`
+* Number of Texts by each Speaker
+* Number of Words by each Speaker
+* Frequency of Words by each Speaker [ignores given list of stopwords]
+
+### Note: Work In Progress.
